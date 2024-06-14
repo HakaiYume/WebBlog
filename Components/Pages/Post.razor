@@ -1,0 +1,54 @@
+@page "/post"
+
+@using WebBlog.Services;
+@using WebBlog.Data.Models;
+
+@inject IPostService postService;
+
+<h3>Post</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>ImageUrl</th>
+            <th>CreatedAt</th>
+            <th>UpdatedAt</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(listPost == null)
+        {
+            <rt>
+                <td>
+                    <img style="width:50px" src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif"/>
+                </td>
+            </rt>
+        }
+        else
+        {
+            @foreach(var item in listPost)
+            {
+                <rt>
+                    <td>@item.Author</td>
+                    <td>@item.Title</td>
+                    <td>@item.Content</td>
+                    <td>@item.ImageUrl</td>
+                    <td>@item.CreatedAt</td>
+                    <td>@item.UpdatedAt</td>
+                </rt>
+            }
+        }
+    </tbody>
+</table>
+
+@code{
+    List<WebBlog.Data.Models.Post>? listPost = null;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        listPost = await postService.Get();
+    }
+}

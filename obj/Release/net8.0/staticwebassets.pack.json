@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\WebBlog.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebBlog.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\assets\\img\\about-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\assets\\img\\contact-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\assets\\img\\home-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\assets\\img\\post-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\post-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\assets\\img\\post-sample-image.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\post-sample-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\fonts\\Lora-Italic-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Lora-Italic-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\fonts\\Lora-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Lora-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\fonts\\OpenSans-Italic-VariableFont_wdth,wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-Italic-VariableFont_wdth,wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\fonts\\OpenSans-VariableFont_wdth,wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-VariableFont_wdth,wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.WebBlog.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.WebBlog.props",
+      "PackagePath": "build\\WebBlog.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebBlog.props",
+      "PackagePath": "buildMultiTargeting\\WebBlog.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebBlog.props",
+      "PackagePath": "buildTransitive\\WebBlog.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
