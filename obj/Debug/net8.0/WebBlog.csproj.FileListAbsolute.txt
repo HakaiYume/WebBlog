@@ -27,3 +27,4 @@ c:\Users\Daniel\Desktop\Programacion\Uni\DWI_blogs\WebBlog\obj\Debug\net8.0\refi
 c:\Users\Daniel\Desktop\Programacion\Uni\DWI_blogs\WebBlog\obj\Debug\net8.0\WebBlog.pdb
 C:\Users\Daniel\Desktop\Programacion\Uni\DWI_blogs\WebBlog\obj\Debug\net8.0\WebBlog.genruntimeconfig.cache
 C:\Users\Daniel\Desktop\Programacion\Uni\DWI_blogs\WebBlog\obj\Debug\net8.0\ref\WebBlog.dll
+c:\Users\Daniel\Desktop\Programacion\Uni\DWI_blogs\WebBlog\obj\Debug\net8.0\WebBlog.sourcelink.json

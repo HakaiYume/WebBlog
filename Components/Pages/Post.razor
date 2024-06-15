@@ -1,54 +1,59 @@
-@page "/post"
+@page "/post/{id:int}"
 
 @using WebBlog.Services;
 @using WebBlog.Data.Models;
 
 @inject IPostService postService;
 
-<h3>Post</h3>
+<header class="masthead" style="background-image: url('@img')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    @if (post != null)
+                    {
+                        <h1>@post.Title</h1>
+                        <span class="meta">
+                            Publicado por
+                            <a href="@post.Id">@post.Author</a>
+                            el @post.CreatedAt.ToShortDateString()
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Author</th>
-            <th>Title</th>
-            <th>Content</th>
-            <th>ImageUrl</th>
-            <th>CreatedAt</th>
-            <th>UpdatedAt</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if(listPost == null)
-        {
-            <rt>
-                <td>
-                    <img style="width:50px" src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif"/>
-                </td>
-            </rt>
-        }
-        else
-        {
-            @foreach(var item in listPost)
-            {
-                <rt>
-                    <td>@item.Author</td>
-                    <td>@item.Title</td>
-                    <td>@item.Content</td>
-                    <td>@item.ImageUrl</td>
-                    <td>@item.CreatedAt</td>
-                    <td>@item.UpdatedAt</td>
-                </rt>
-            }
-        }
-    </tbody>
-</table>
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                @if (post != null)
+                {
+                    <p>@post.Content</p>
+                }
+                else
+                {
+                    <p>Loading...</p>
+                }
+            </div>
+        </div>
+    </div>
+</article>
 
-@code{
-    List<WebBlog.Data.Models.Post>? listPost = null;
-    
+@code {
+    [Parameter] public int id { get; set; }
+    private WebBlog.Data.Models.Post post;
+    private string img;
+
     protected override async Task OnInitializedAsync()
     {
-        listPost = await postService.Get();
+        var result = await postService.GetById(id);
+        post = result[0];
+        if(post.ImageUrl != null){
+            img = post.ImageUrl;
+        }
     }
 }

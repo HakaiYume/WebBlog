@@ -1,0 +1,123 @@
+@page "/postIndex"
+
+@using WebBlog.Services;
+@using WebBlog.Data.Models;
+
+@inject IPostService postService;
+@inject NavigationManager Navigation
+
+<header class="masthead">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-3 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Tus publicaciones</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="d-flex justify-content-end mb-2" style="margin: 10px;">
+    <button class="btn btn-primary btn-square"><i class="fa-solid fa-plus fa-xs" style="color: #ffffff;"></i></button>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>ImageUrl</th>
+            <th>CreatedAt</th>
+            <th>UpdatedAt</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (listPost == null)
+        {
+            <tr>
+                <td colspan="7">
+                    <img style="width:50px" src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" />
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var item in listPost)
+            {
+                <tr>
+                    <td>@item.Author</td>
+                    <td>@item.Title</td>
+                    <td>@TruncateContent(item.Content)</td>
+                    <td><img style="width:50px" src="@item.ImageUrl" /></td>
+                    <td>@item.CreatedAt</td>
+                    <td>@item.UpdatedAt</td>
+                    <td>
+                        <button class="btn btn-warning btn-square">
+                            <i class="fas fa-edit fa-xs" style="color: #ffffff;"></i>
+                        </button>
+                        <button class="btn btn-danger btn-square">
+                            <i class="fas fa-trash fa-xs" style="color: #ffffff;"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<style>
+    .btn-square {
+        width: 30px;  /* Reduce button size */
+        height: 30px; /* Reduce button size */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+    }
+
+    .btn-square i {
+        margin: 10px;
+    }
+
+    .masthead {
+        background-image: url('assets/img/home-bg.jpg');
+        height: 0px; /* Ajusta esta altura según tus necesidades */
+    }
+</style>
+
+@code {
+    List<WebBlog.Data.Models.Post>? listPost = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        listPost = await postService.Get();
+    }
+
+    private void AddPost()
+    {
+        Navigation.NavigateTo("/addpost");
+    }
+
+    private void EditPost(int id)
+    {
+        Navigation.NavigateTo($"/editpost/{id}");
+    }
+
+    private async Task DeletePost(int id)
+    {
+        //await postService.Delete(id);
+        //listPost = await postService.Get(); // Refresh the list after deletion
+    }
+
+    private string TruncateContent(string content)
+    {
+        if (content.Length <= 100)
+        {
+            return content;
+        }
+        return content.Substring(0, 100) + "...";
+    }
+}

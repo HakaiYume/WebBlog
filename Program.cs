@@ -9,6 +9,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddScoped(sp=> new HttpClient{BaseAddress = new Uri("http://apimyblog.somee.com") });
 builder.Services.AddScoped<IPostService, PostService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 var app = builder.Build();
 

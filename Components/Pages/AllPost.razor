@@ -1,17 +1,17 @@
-﻿@page "/"
+@page "/allPost"
 
 @using WebBlog.Services;
 @using WebBlog.Data.Models;
 
 @inject IPostService postService;
 
-<header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+<header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     <h1>WebBlog</h1>
-                    <span class="subheading">Un blog para todos</span>
+                    <span class="subheading">Todas las publicaciones</span>
                 </div>
             </div>
         </div>
@@ -46,8 +46,6 @@
                     <hr class="my-4" />
                 }
             }
-            <!-- Pager-->
-            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="/allPost">Todas Las Publicaciones →</a></div>
         </div>
     </div>
 </div>
@@ -57,7 +55,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        listPost = await postService.GetTop();
+        listPost = await postService.Get();
     }
 
     private string TruncateContent(string content)

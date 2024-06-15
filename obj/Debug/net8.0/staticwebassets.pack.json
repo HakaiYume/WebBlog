@@ -49,6 +49,14 @@
       "PackagePath": "staticwebassets\\fonts\\Lora-VariableFont_wght.ttf"
     },
     {
+      "Id": "c:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\fonts\\Nunito-Italic-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Nunito-Italic-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "c:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\fonts\\Nunito-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Nunito-VariableFont_wght.ttf"
+    },
+    {
       "Id": "c:\\Users\\Daniel\\Desktop\\Programacion\\Uni\\DWI_blogs\\WebBlog\\wwwroot\\fonts\\OpenSans-Italic-VariableFont_wdth,wght.ttf",
       "PackagePath": "staticwebassets\\fonts\\OpenSans-Italic-VariableFont_wdth,wght.ttf"
     },
